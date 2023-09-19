@@ -22,8 +22,10 @@ module.exports = {
     }],
     // 禁止低优先级的选择器出现在高优先级的选择器之后。
     "no-descending-specificity": null,
-    // 不验证@未知的名字，为了兼容scss的函数
+    // // 不验证@未知的名字，为了兼容scss的函数
     "at-rule-no-unknown": null,
+    "import-notation": null,
+    "at-rule-empty-line-before": null,
     // 禁止空注释
     "comment-no-empty": true,
     // 禁止简写属性的冗余值
@@ -116,5 +118,5 @@ module.exports = {
       "transition"
     ],
   },
-  ignoreFiles: ["dist/**/*", "src/assets/*.scss"]
+  ignoreFiles: ["dist/**/*", "src/assets/*.less"]
 }

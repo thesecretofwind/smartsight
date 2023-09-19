@@ -27,7 +27,7 @@ module.exports = {
     "array-callback-return": "error", // 强制数组的某些需要返回值的回调函数中有 return 语句。
     "block-scoped-var": "error", // 强制把变量的使用限制在其定义的作用域范围内
     "default-case": "error", // 要求 switch 语句中有 default 分支
-    "no-empty-function": "error", // 禁止出现空函数
+    // "no-empty-function": "error", // 禁止出现空函数
     "no-fallthrough": "error", // 禁止 case 贯穿。
     "no-labels": "error", // 禁用标签语句
     "no-redeclare": "error", // 禁止多次声明同一变量
