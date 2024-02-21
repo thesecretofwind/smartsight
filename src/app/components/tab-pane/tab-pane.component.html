@@ -1,0 +1,6 @@
+<div *ngIf="active" [@slideAnimation]="slideAnimation">
+  <ng-content></ng-content>
+  {{ slideAnimation | json}}
+</div>
+<!-- <div class="cur" [@slideAnimation]="state"></div> -->
+

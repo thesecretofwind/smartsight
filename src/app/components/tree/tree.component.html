@@ -1,0 +1,19 @@
+<cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
+
+  <cdk-tree-node *cdkTreeNodeDef="let node" [cdkTreeNodePadding]="node.level"
+    [style.display]="shouldRender(node) ? 'flex' : 'none'" class="example-tree-node">
+    <span nz-icon [nzType]="treeControl.isExpanded(node) ? 'up' : 'down' " nzTheme="outline"
+    (click)="node.isExpanded = !node.isExpanded"
+    [style.visibility]="node.disabled ? 'visible' : 'hidden'"></span>
+    {{node.name}}
+  </cdk-tree-node>
+  <cdk-tree-node *cdkTreeNodeDef="let node; when: hasChild" [cdkTreeNodePadding]="node.level"
+    [style.display]="shouldRender(node) ? 'flex' : 'none'" class="example-tree-node">
+      {{ treeControl.isExpanded(node) }}
+
+      <span nz-icon [nzType]="treeControl.isExpanded(node) ? 'up' : 'right' " nzTheme="outline"
+        (click)="node.isExpanded = !node.isExpanded"
+        [style.visibility]="node.disabled ? 'visible' : 'hidden'"></span>
+    {{node.name}}
+  </cdk-tree-node>
+</cdk-tree>

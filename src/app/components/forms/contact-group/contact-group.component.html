@@ -1,0 +1,29 @@
+  <!-- 第x联系人 -->
+  <fieldset [formGroupName]="groupName">
+    <legend>{{ legend }}</legend>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="请选择联系人关系">
+          <nz-form-label>与本人关系</nz-form-label>
+          <nz-select formControlName="relation" class="relation-select">
+            <nz-option nzLabel="母子" nzValue="母子"></nz-option>
+            <nz-option nzLabel="父子" nzValue="父子"></nz-option>
+            <nz-option nzLabel="朋友" nzValue="朋友"></nz-option>
+            <nz-option nzLabel="同事" nzValue="同事"></nz-option>
+          </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+    <!-- <nz-form-item>
+      <nz-form-control nzErrorTip="请输入联系人姓名">
+        <nz-form-label>姓名</nz-form-label>
+        <input type="text" nz-input formControlName="username" placeholder="请输入用户名">
+      </nz-form-control>
+    </nz-form-item> -->
+    <app-input errorTip="请输入联系人姓名" label="姓名" [myControl]="getControl('username')" placeholder="请输入用户名"></app-input>
+    <nz-form-item>
+      <nz-form-control nzErrorTip="请输入手机号码！">
+        <nz-form-label>手机号码</nz-form-label>
+        <input type="text" nz-input formControlName="phone" placeholder="请输入手机号码">
+      </nz-form-control>
+    </nz-form-item>
+    <app-formcontrolname-input controlName="hhh" placeholder="请输入hhh"></app-formcontrolname-input>
+  </fieldset>

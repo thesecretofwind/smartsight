@@ -1,0 +1,37 @@
+.tabs {
+  position: relative;
+  display: flex;
+
+  .tab-title {
+    cursor: pointer;
+    margin-right: 10px;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    padding: 8px;
+    user-select: none;
+
+    &:hover {
+      color: #1890FF;
+    }
+  }
+
+  .active {
+    color: #1890FF;
+    background-color: white;
+  }
+
+  .line {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #1890FF;
+    transition: transform .3s cubic-bezier(.35, 0, .25, 1);
+  }
+
+  .tab-content {
+    margin-top: -1px;
+    border: 1px solid #DDDDDD;
+    border-radius: 0 0 4px 4px;
+    padding: 10px;
+  }
+}

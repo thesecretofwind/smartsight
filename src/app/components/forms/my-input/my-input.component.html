@@ -1,0 +1,18 @@
+<div class="my-input" *appUnless="'hello world';let data;">
+  <input #inputElement
+        appInput
+        [type]="type"
+        [(ngModel)]="actualvalue"
+        [maxlength]="maxLength"
+        [max]="max"
+        [placeholder]="placeholder"
+        (ngModelChange)="modelChange($event)"
+        (valueChange)="modelChange($event)">
+    <div>
+      buzhidao---{{data}}
+    </div>
+</div>
+<div #container>
+  nihaoya
+</div>
+

@@ -4,6 +4,19 @@
   <nz-option nzValue="dark" nzLabel="dark"></nz-option>
 </nz-select>
 
-<button nz-button nzType="primary">hello</button>
+<button nz-button nzType="primary" (click)="clickSubject.next(null)">hello</button>
+<a routerLink="/contact" routerLinkActive="active">跳转至表单路由</a>
+<a routerLink="/contact" routerLinkActive="active">跳转至首页</a>
+<span nz-icon nzType="right" nzTheme="outline"></span>
+<app-tree></app-tree>
 
-<!-- [(ngModel)]="currentTheme"  [(ngModelChange)]="changeTheme($event)" -->
+<!-- <input type="text" placeholder="请输入值。。。" [(ngModel)]="inputControl"/>
+<app-tabs [selectedIndex]="2">
+  <app-tab-pane tabTitle="Tab 1">tab1内容</app-tab-pane>
+  <app-tab-pane tabTitle="Tab 2">tab2内容</app-tab-pane>
+  <app-tab-pane tabTitle="Tab 3">tab3内容</app-tab-pane>
+</app-tabs> -->
+<!-- <app-change ></app-change> -->
+
+
+<router-outlet></router-outlet>

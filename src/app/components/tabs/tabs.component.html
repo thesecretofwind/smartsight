@@ -1,0 +1,14 @@
+<div class="tabs">
+  <div #tabLabel
+    *ngFor="let tab of tabPanes;let index=index"
+    (click)="selectTab(tab, index)"
+    [class.active]="tab.active"
+    class="tab-title">
+    {{tab.tabTitle}}
+  </div>
+  <div class="line" [style]="lineStyle"> </div>
+</div>
+<div class="tab-content" #a>
+  hello world
+  <ng-content></ng-content>
+</div>

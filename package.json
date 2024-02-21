@@ -40,6 +40,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.1.0",
+    "@angular/cdk": "^14.2.7",
     "@angular/common": "^14.1.0",
     "@angular/compiler": "^14.1.0",
     "@angular/core": "^14.1.0",
@@ -47,7 +48,9 @@
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
+    "@ant-design/icons-angular": "^14.1.0",
     "husky": "^8.0.3",
+    "momment": "^0.0.1",
     "ng-zorro-antd": "^14.0.0",
     "rxjs": "~7.5.0",
     "stylelint": "^15.10.3",

@@ -59,6 +59,7 @@ module.exports = {
     "prefer-destructuring": "warn", // 优先使用数组和对象解构
     "prefer-template": "warn", // 要求使用模板字面量而非字符串连接
     "no-unused-vars": "off", // 禁止出现未使用过的变量
-    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }]
+    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+    "@typescript-eslint/no-explicit-any": 0
   },
 };

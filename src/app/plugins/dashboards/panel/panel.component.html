@@ -1,0 +1,45 @@
+<!-- <div class="panels" *ngFor="let item of panels;let rowIndex=index">
+  <div class="panel" nz-row nzGutter="24">
+    <div class="widget" *ngFor="let row of item;let colIndex=index;" nz-col [nzSpan]="row.columns">
+      <div class="content" *ngIf="row.id" [ngStyle]="{height: row.height}" [attr.rowIndex]="rowIndex" [attr.colIndex]="colIndex" appWidgetDraggable appWidgetDrop>
+        <div class="widget-header" *ngIf="row.title">
+          <span class="title">{{ row.title }}</span>
+          <span class="option-icons">
+            <span nz-icon nzType="setting" nzTheme="fill"></span>
+            <span nz-icon nzType="delete" nzTheme="fill"></span>
+          </span>
+        </div>
+        <app-widget [rowIndex]="rowIndex" [colIndex]="colIndex" [id]="row.id"></app-widget>
+      </div>
+      <div class="no-content" *ngIf="!row.id" [ngStyle]="{height: row.height}" [attr.rowIndex]="rowIndex" [attr.colIndex]="colIndex" appWidgetDraggable appWidgetDrop>
+        <span nz-icon nzType="plus-circle" nzTheme="fill" class="icon"></span>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+
+<div class="panels">
+  <!--       [attr.row]="calRow(i).row"
+      [attr.col]="calRow(i).col" -->
+  <!-- <div class="panel" *ngFor="let widget of panels;let i = index"> -->
+    <!-- <div class="widget" *ngFor="let widget of panels" nz-col [nzSpan]="widget.columns" > -->
+      <div class="widget-wrapper"
+      *ngFor="let widget of panels;let i = index;trackBy: trackByFn"
+      [attr.index]="i"
+      [attr.originIndex]="i"
+      appWidgetDraggable
+      appWidgetDrop
+      #widget
+      >
+        <app-widget
+        class="widget"
+        [id]="widget.id"
+        [index]="i"
+        ></app-widget>
+
+      </div>
+
+    <!-- </div> -->
+  <!-- </div> -->
+</div>
